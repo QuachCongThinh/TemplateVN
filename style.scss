@@ -152,7 +152,6 @@ header .nav .navbar ul li a:hover {
     font-size: 27px;
     font-weight: 500;
     text-align: justify;
-    float: right;
     margin-right: 100px;
     margin-top: 100px;
     opacity: 0;
@@ -446,7 +445,7 @@ header .nav .navbar ul li a:hover {
     }
     header .nav .logo img{
         position: absolute;
-        left: -10px;
+        left: 0;
         top: -20px;
         width: 4rem;     
     }
@@ -509,7 +508,7 @@ header .nav .navbar ul li a:hover {
     }
 
     #container{
-        height: 300px;
+        height: 250px;
     }
     #container .bg img{
         width: 100%;
@@ -518,41 +517,42 @@ header .nav .navbar ul li a:hover {
     #container .content h1{
         width: 100%;
         font-size: 4rem;
-        margin-top: 100px;
-        margin-left: 60px;
+        margin-top: 25%;
+        margin-left: 10%;
     }
     #container .content p{
         width: 300px;
         font-size: 13px;
         line-height: 20px;
-        margin-left: auto;
-        margin-right: 65px;
-        margin-top: 30px;
+        margin-top: 10px;
+        margin-left: 40px;
         letter-spacing: 0;
     }
 
     #about{
-        height: 1000px;
+        height: 850px;
         position: relative;
+        margin-top: 60px;
     }
     #about p{
         width: 350px;
-        top: 10%;
+        top: 20px;
         left: 50%;
         transform: translateX(-50%);
         font-size: 16px;
         text-align: justify;
+        padding: 0 10px;
     }
     #about img{
         position: absolute;
-        top: 55%;
+        top: 58%;
         width: 50%;
         left: 50%;
         transform: translateX(-50%);
     }
 
     #geography{
-        height: 1300px;
+        height: 1110px;
     }
     #geography img{
         position: absolute;
@@ -567,8 +567,9 @@ header .nav .navbar ul li a:hover {
         width: 350px;
         top: 50%;
         left: 50%;
+        letter-spacing: 0;
+        padding: 0 10px;
         transform: translateX(-50%);
-        font-size: 16px;
     }
 
     #tourism .tour{
