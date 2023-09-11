@@ -14,11 +14,10 @@ img {
 }
 :root {
     --font: 'Roboto', sans-serif;
-    --border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-    --heading: #353738;
-    --text: #848789;
-    --bg-light: #f7f7f7;
+    --box-shadow:
+    5px 5px 15px #c1c8d3,
+        -5px -5px 15px #ffffff;
+    --color: #3c3e41;
 }
 html,
 body {
@@ -26,9 +25,15 @@ body {
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
 }
+
+header input,
+header .navDiv,
+header .nav .navbar .navXmark label {
+    display: none;
+}
 header {
     padding-top: 20px;
-    z-index: 99;
+    z-index: 2;
     width: 100%;
     height: 70px;
     background-color: #ffffff;
@@ -92,24 +97,6 @@ header .nav .navbar ul li a {
     text-decoration: none;
 }
 header .nav .navbar ul li a:hover {
-    color: #079246;
-}
-header .nav .iconsearch {
-    animation: slideleft 0.7s ease forwards;
-    opacity: 0;
-    margin-right: 50px;
-}
-@keyframes slideleft {
-    0% {
-        opacity: 0;
-        transform: translateX(200px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-header .nav .iconsearch:hover {
     color: #079246;
 }
 
@@ -194,17 +181,16 @@ header .nav .iconsearch:hover {
     font-size: 22px;
     line-height: 35px;
     text-align: justify;
-    top: 50%;
+    top: 30%;
+    left: 15%;
     letter-spacing: 0.1rem;
-    transform: translate(-50%, -40%);
-    left: 40%;
     font-family: var(--font);
 }
 #about img {
-    width: 20%;
+    width: 15%;
     position: absolute;
     right: 0;
-    margin-right: 200px;
+    margin-right: 300px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -284,7 +270,7 @@ header .nav .iconsearch:hover {
 #tourism .list-tourism .text-title {
     font-size: 25px;
     color: #fff;
-    font-weight: 700;
+    font-weight: 800;
     padding-top: 50px;
     text-align: center;
     position: relative;
@@ -312,11 +298,10 @@ header .nav .iconsearch:hover {
     &::before{
         content: "";
         width: 100%;
-        height: 50px;
+        height: 100%;
         background-color: rgba(255, 255, 255, 0.7);
         position: absolute;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-radius: 10px;
         left: 0;
         bottom: 0;
         z-index: 1;
@@ -334,7 +319,7 @@ header .nav .iconsearch:hover {
     font-weight: 700;
     text-align: center;
     position: absolute;
-    top: 87%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -345,9 +330,15 @@ header .nav .iconsearch:hover {
     visibility: visible;
 }
 
+//responsive
 @media screen and (max-width: 1024px) {
+    header input,
+    header .nav .navDiv,
+    header .nav .navbar .navXmark label {
+        display: none;
+    }
     header{
-        width: 100%;
+        margin-top: -2px;
         padding-top: 20px;
     }
     header .nav{
@@ -361,11 +352,11 @@ header .nav .iconsearch:hover {
     }
 
     #container {
-        height: 50vh;
+        height: 570px;
     }
     #container .content h1{
         font-size: 7rem;
-        margin-left: 50px;
+        margin-left: 100px;
         margin-top: 190px;
     }
     #container .content p{
@@ -374,24 +365,26 @@ header .nav .iconsearch:hover {
         letter-spacing: 0.1rem;
         width: 400px;
         margin-top: 20px;
-        margin-right: 40px;
     }
 
     #about{
         height: 500px;
         position: relative;
+        margin-bottom: 20px;
     }
     #about p{
         font-size: 20px;
         width: 450px;
-        left: 32%;
         position: absolute;
-        top: 45%;
-        line-height: 30px;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        line-height: 35px;
     }
     #about img{
-        width: 40%;
-        margin: auto;
+        width: 30%;
+        right: 0;
+        margin-right: 50px;
     }
 
     #geography{
@@ -435,5 +428,173 @@ header .nav .iconsearch:hover {
     #tourism .list-tourism .text-img > div{
         width: 100%;
     }
+    #tourism .list-tourism .text-img div > p{
+        position: absolute;
+        top: 50%;
+    }
 }
 
+@media screen and (max-width: 768px) {
+    header input{
+        display: none;
+    }
+    header{
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        top: 0;
+    }
+    header .nav .logo img{
+        position: absolute;
+        left: -10px;
+        top: -20px;
+        width: 4rem;     
+    }
+    header .nav .navDiv{
+        display: flex;
+        justify-content: end;
+        position: absolute;
+        top: -10px;
+        right: 0;
+        margin-right: 20px;
+    }
+    header .nav .navDiv label{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-text);
+        box-shadow: var(--box-shadow);
+        border-radius: 50%;
+    }
+    header .nav .navbar .navXmark{
+        position: fixed;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        opacity: 1;
+        height: 100vh;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 70px);
+        transform: translateX(100%);
+        transition: 0.5s;
+    }
+    header .nav .navbar .navXmark li{
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        font-weight: 800;
+    }
+    input#menu:checked~.navbar .navXmark{
+        transform: translateX(0%);
+    }
+    header .nav .navbar .navXmark label{
+        width: 40px;
+        height: 40px;
+        box-shadow: var(--box-shadow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: red;        
+        margin-left: auto;
+        margin-right: 20px;
+        margin-top: 8px;
+    }
+
+    #container{
+        height: 300px;
+    }
+    #container .bg img{
+        width: 100%;
+        margin-top: 60px;
+    }
+    #container .content h1{
+        width: 100%;
+        font-size: 4rem;
+        margin-top: 100px;
+        margin-left: 60px;
+    }
+    #container .content p{
+        width: 300px;
+        font-size: 13px;
+        line-height: 20px;
+        margin-left: auto;
+        margin-right: 65px;
+        margin-top: 30px;
+        letter-spacing: 0;
+    }
+
+    #about{
+        height: 1000px;
+        position: relative;
+    }
+    #about p{
+        width: 350px;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        text-align: justify;
+    }
+    #about img{
+        position: absolute;
+        top: 55%;
+        width: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #geography{
+        height: 1300px;
+    }
+    #geography img{
+        position: absolute;
+        display: block;
+        top: 2%;
+        width: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #geography p{
+        font-size: 16px;
+        width: 350px;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+    }
+
+    #tourism .tour{
+        padding: 20px 30px;
+    }
+
+    #tourism .list-tourism{
+        height: 1100px;
+    }
+    #tourism .list-tourism .text-title{
+        padding: 20px 20px 0 20px;
+    }
+
+    #tourism .list-tourism .text-img{
+        width: 100%;
+        display: inline-block;
+        position: relative;
+    }
+    #tourism .list-tourism .text-img > div{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #tourism .list-tourism .text-img div > p{
+        font-size: 15px;
+        position: absolute;
+        top: 50%;
+        transform: translateX(-50%);
+    }
+}
