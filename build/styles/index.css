@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 /* Reset css */
 img {
   max-width: 100%;
@@ -23,17 +23,17 @@ img {
 html,
 body {
   overflow-x: hidden;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font);
   scroll-behavior: smooth;
 }
 
-header input,
-header .navDiv,
-header .nav .navbar .navXmark label {
+#header input,
+#header .navDiv,
+#header .nav .navbar .navXmark label {
   display: none;
 }
 
-header {
+#header {
   padding-top: 20px;
   z-index: 2;
   width: 100%;
@@ -44,7 +44,7 @@ header {
   border-bottom: var(--border-bottom);
 }
 
-header .nav .logo img {
+#header .nav .logo img {
   width: 4.5em;
   margin-left: 40px;
   opacity: 0;
@@ -61,7 +61,7 @@ header .nav .logo img {
     transform: translateY(0);
   }
 }
-header .nav {
+#header .nav {
   width: 100%;
   height: 2rem;
   display: flex;
@@ -70,12 +70,12 @@ header .nav {
   position: relative;
 }
 
-header .nav .navbar ul {
+#header .nav .navbar ul {
   cursor: pointer;
   display: flex;
 }
 
-header .nav .navbar ul li {
+#header .nav .navbar ul li {
   margin-left: 50px;
   list-style: none;
   font-family: var(--font);
@@ -97,13 +97,13 @@ header .nav .navbar ul li {
     transform: translateY(0);
   }
 }
-header .nav .navbar ul li a {
+#header .nav .navbar ul li a {
   color: black;
   transition: all 0.2s;
   text-decoration: none;
 }
 
-header .nav .navbar ul li a:hover {
+#header .nav .navbar ul li a:hover {
   color: #079246;
 }
 
@@ -197,7 +197,7 @@ header .nav .navbar ul li a:hover {
 }
 
 #about img {
-  width: 15%;
+  width: 20%;
   position: absolute;
   right: 0;
   margin-right: 300px;
@@ -217,7 +217,7 @@ header .nav .navbar ul li a:hover {
 }
 
 #geography img {
-  width: 15%;
+  width: 20%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -354,22 +354,22 @@ header .nav .navbar ul li a:hover {
 }
 
 @media screen and (max-width: 1024px) {
-  header input,
-  header .nav .navDiv,
-  header .nav .navbar .navXmark label {
+  #header input,
+  #header .nav .navDiv,
+  #header .nav .navbar .navXmark label {
     display: none;
   }
-  header {
+  #header {
     margin-top: -2px;
     padding-top: 20px;
   }
-  header .nav {
+  #header .nav {
     height: 2rem;
   }
-  header .nav .navbar ul li {
+  #header .nav .navbar ul li {
     margin: 0 10px;
   }
-  header .nav .logo img {
+  #header .nav .logo img {
     width: 4rem;
   }
   #container {
@@ -451,22 +451,22 @@ header .nav .navbar ul li a:hover {
   }
 }
 @media screen and (max-width: 768px) {
-  header input {
+  #header input {
     display: none;
   }
-  header {
+  #header {
     width: 100%;
     height: 60px;
     position: fixed;
     top: 0;
   }
-  header .nav .logo img {
+  #header .nav .logo img {
     position: absolute;
     left: 0;
     top: -20px;
     width: 4rem;
   }
-  header .nav .navDiv {
+  #header .nav .navDiv {
     display: flex;
     justify-content: end;
     position: absolute;
@@ -474,7 +474,7 @@ header .nav .navbar ul li a:hover {
     right: 0;
     margin-right: 20px;
   }
-  header .nav .navDiv label {
+  #header .nav .navDiv label {
     width: 40px;
     height: 40px;
     display: flex;
@@ -484,7 +484,7 @@ header .nav .navbar ul li a:hover {
     box-shadow: var(--box-shadow);
     border-radius: 50%;
   }
-  header .nav .navbar .navXmark {
+  #header .nav .navbar .navXmark {
     position: fixed;
     background-color: rgb(255, 255, 255);
     width: 100%;
@@ -499,7 +499,7 @@ header .nav .navbar ul li a:hover {
     transform: translateX(100%);
     transition: 0.5s;
   }
-  header .nav .navbar .navXmark li {
+  #header .nav .navbar .navXmark li {
     font-size: 17px;
     display: flex;
     justify-content: center;
@@ -510,7 +510,7 @@ header .nav .navbar ul li a:hover {
   input#menu:checked ~ .navbar .navXmark {
     transform: translateX(0%);
   }
-  header .nav .navbar .navXmark label {
+  #header .nav .navbar .navXmark label {
     width: 40px;
     height: 40px;
     box-shadow: var(--box-shadow);
@@ -533,9 +533,9 @@ header .nav .navbar ul li a:hover {
   }
   #container .content h1 {
     width: 100%;
-    font-size: 4rem;
-    margin-top: 25%;
-    margin-left: 12%;
+    font-size: 4.5rem;
+    margin-top: 20%;
+    margin-left: 35px;
   }
   #container .content p {
     position: absolute;
@@ -565,12 +565,12 @@ header .nav .navbar ul li a:hover {
     position: absolute;
     top: 55%;
     margin-bottom: 20px;
-    width: 50%;
+    width: 60%;
     left: 50%;
     transform: translateX(-50%);
   }
   #geography {
-    height: 1150px;
+    height: 1000px;
   }
   #geography img {
     position: absolute;
@@ -582,7 +582,7 @@ header .nav .navbar ul li a:hover {
   #geography p {
     font-size: 16px;
     width: 350px;
-    top: 51%;
+    top: 45%;
     left: 50%;
     letter-spacing: 0;
     padding: 0 10px;
@@ -592,7 +592,7 @@ header .nav .navbar ul li a:hover {
     padding: 20px 30px;
   }
   #tourism .list-tourism {
-    height: 935px;
+    height: 980px;
   }
   #tourism .list-tourism .text-title {
     padding: 20px 20px 0 20px;
