@@ -666,5 +666,11 @@ body {
     width: 90%;
   }
 }
+@media screen and (min-width: 321px) and (max-width: 376px) {
+  #container .content h1 {
+    font-size: 4rem;
+    margin-left: 20px;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
