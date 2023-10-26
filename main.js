@@ -1,6 +1,6 @@
-    var openMenu = document.querySelector('.navDiv'); 
-var menu = document.querySelector('#header .nav .navbar .navXmark');
-var closeMenu = document.querySelector('#header .nav .navbar .navXmark label');
+let openMenu = document.querySelector('.navDiv'); 
+let menu = document.querySelector('#header .nav .navbar .navXmark');
+let closeMenu = document.querySelector('#header .nav .navbar .navXmark label');
 
 openMenu.onclick = function(){
     menu.style.width = '100%';
@@ -10,12 +10,12 @@ closeMenu.onclick = function(){
     menu.style.width = '0';
 }
 
-var menuItems = document.querySelectorAll('#header .nav .navbar ul li a');
-var body = document.querySelector('body');
+let menuItems = document.querySelectorAll('#header .nav .navbar ul li a');
+let body = document.querySelector('body');
 
-for (var i = 0; i < menuItems.length; i++) {
-    var menuItem = menuItems[i];
-    var currentWidth = body.clientWidth;
+for (let i = 0; i < menuItems.length; i++) {
+    let menuItem = menuItems[i];
+    let currentWidth = body.clientWidth;
 
     menuItem.onclick = function(){
         if(currentWidth <= 768){
@@ -26,3 +26,16 @@ for (var i = 0; i < menuItems.length; i++) {
         }
     }   
 }
+
+let headerScroll = document.querySelector('#header .menuscroll')
+
+const scroll = () => {
+    console.log(window.scrollY);
+    if(window.scrollY > 100){
+        headerScroll.style.display = 'block'
+    }else{
+        headerScroll.style.display = 'none'
+    }
+}
+window.addEventListener('scroll', scroll)
+
