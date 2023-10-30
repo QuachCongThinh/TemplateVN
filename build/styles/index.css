@@ -14,15 +14,14 @@ img {
 
 :root {
   --font: "Roboto", sans-serif;
-  --box-shadow:
-  5px 5px 15px #c1c8d3,
-      -5px -5px 15px #ffffff;
+  --box-shadow: 5px 5px 15px #c1c8d3, -5px -5px 15px #ffffff;
   --color: #3c3e41;
   --border-bottom: 1px solid #333;
 }
 
 html,
 body {
+  scroll-padding-top: 60px;
   overflow-x: hidden;
   font-family: var(--font);
   scroll-behavior: smooth;
@@ -219,17 +218,14 @@ body {
   width: 100%;
   height: 650px;
   background-color: rgb(73, 158, 116);
-  margin-bottom: 30px;
   position: relative;
-  margin-top: 30px;
 }
 
 #geography img {
-  width: 20%;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 10%;
+  width: 25%;
+  margin-top: 50px;
+  margin-left: 70px;
   border-radius: 10px;
   z-index: 1;
 }
@@ -425,8 +421,8 @@ body {
   }
   #geography img {
     position: absolute;
-    width: 40%;
-    left: 5%;
+    width: 35%;
+    margin-top: 100px;
   }
   #tourism .tour {
     display: block;
@@ -437,7 +433,7 @@ body {
     margin-bottom: 10px;
   }
   #tourism .list-tourism {
-    height: 750px;
+    height: 700px;
   }
   #tourism .list-tourism .text-title {
     padding-top: 30px;
@@ -449,7 +445,7 @@ body {
     row-gap: 20px;
   }
   #tourism .list-tourism .text-img > div {
-    width: 45%;
+    width: 40%;
   }
   #tourism .list-tourism .text-img div > p {
     position: absolute;
@@ -488,6 +484,7 @@ body {
     justify-content: center;
     color: var(--color-text);
     box-shadow: var(--box-shadow);
+    background-color: #fff;
     border-radius: 50%;
   }
   #header .nav .navbar .navXmark {
@@ -551,40 +548,35 @@ body {
   #about p {
     width: 80%;
     position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 16px;
     text-align: justify;
     line-height: 30px;
+    margin-top: 250px;
   }
   #about img {
-    position: absolute;
     top: 0;
+    margin-top: 50px;
     width: 40%;
     left: 50%;
     transform: translateX(-50%);
   }
   #geography {
-    height: 60em;
+    height: 58 em;
     position: relative;
   }
   #geography img {
-    position: absolute;
-    top: 3%;
-    width: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 40%;
+    margin-top: 50px;
+    margin-left: 220px;
   }
   #geography p {
-    position: absolute;
-    left: 10%;
-    top: 75%;
     margin-top: 50px;
     font-size: 16px;
     line-height: 30px;
     width: 80%;
-    letter-spacing: 0;
+    left: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
   }
   #tourism .tour {
     padding: 20px 30px;
@@ -664,12 +656,6 @@ body {
   }
   #tourism .list-tourism .text-img > div {
     width: 90%;
-  }
-}
-@media screen and (min-width: 321px) and (max-width: 376px) {
-  #container .content h1 {
-    font-size: 4rem;
-    margin-left: 20px;
   }
 }
 
