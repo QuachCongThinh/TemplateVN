@@ -188,8 +188,9 @@ body {
     font-size: 22px;
     line-height: 35px;
     text-align: justify;
-    top: 30%;
-    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 100px;
     letter-spacing: 0.1rem;
     font-family: var(--font);
 }
@@ -380,8 +381,8 @@ body {
         width: 450px;
         position: absolute;
         left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
+        // top: 50%;
+        // transform: translateY(-50%);
         line-height: 35px;
     }
     #about img {
@@ -424,8 +425,6 @@ body {
         padding-top: 30px;
     }
     #tourism .list-tourism .text-img {
-        display: flex;
-        justify-content: space-around;
         flex-wrap: wrap;
         row-gap: 20px;
     }
@@ -536,22 +535,20 @@ body {
     }
     #about p {
         width: 80%;
-        position: absolute;
         font-size: 16px;
         text-align: justify;
         line-height: 30px;
-        margin-top: 250px;
     }
     #about img {
         top: 0;
-        margin-top: 50px;
+        display: block;
         width: 40%;
         left: 50%;
         transform: translateX(-50%);
     }
 
     #geography {
-        height: 58  em;
+        height: 58em;
         position: relative;
     }
     #geography img {
